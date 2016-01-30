@@ -11,10 +11,29 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.runtime.min.js"></script>
 </head>
 <body>
+
+<div>
+Sample data!
+</div>
+
+
 <div>
 <script id="problem-list" type="text/x-handlebars-template">
 {{problemList}}
 </script>
 </div>
+
+<div>
+<script type="text/javascript">
+var problems = $('#problem-list').text();
+var decoded_problems = $("<div/>").html(problems).text();
+var parsed_problems = $.parseJSON(decoded_problems);
+$.each(parsed_problems, function(i, problem) {
+    console.log(problem.id);
+});
+</script>
+</div>
+
+
 </body>
 </html>
