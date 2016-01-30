@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Feed</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+<script>
+    function retrieve_id() {
+var retrieve_id = $('#retrieve').val();
+var serialData = $('#retrieve').serialize();
+
+$.ajax({
+    url:'./retrieve_problem.php',
+    type: 'POST',
+    data: serialData,
+    success: function(data) {
+      alert(data);
+}
+});
+
+</script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title"> 
+                     <h1>Problem Feed</h1>
+                        <!-- <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="ibox-content">
+
+<input type="text" class="form-control input-sm m-b-xs" id="filter"
+                                   placeholder="Search in table">
+                    <table class="footable table table-stripped" data-page-size="10" data-filter=#filter> 
+                    <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Tags</th>
+                        <th data-hide="phone,tablet">URL</th>
+                        <th data-hide="phone,tablet">Affected group</th>
+                        <th># Affected</th>
+                        <th>Location</th>
+                        <th data-hide="phone,tablet">Factors</th>
+                        <th>Awareness</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                         <tr class="gradeX"><td>Americans are bad at math<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="271297dd-a7ef-4851-93fb-801d27935ba0" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Education</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> <br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="38eb28c3-0c2b-492c-912b-198308513bc8" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> People need to learn how to frikkin recycle >:o<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="a56c0a7f-d20b-4e30-9ff7-0866800f850a" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td>punching, recycling, violence, environment</td><td></td><td></td><td></td><td>United States Los Angeles, California</td><td>idiots</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> My place is cluttered.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="b09bcf6d-4e4c-4633-85e7-5c7229db3bec" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>community, personal, living</td><td></td><td>me</td><td>1</td><td>United States Virginia</td><td>too much stuff, not giving enough to charity</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Parents with anti-vaccination ideologies have been choosing not to vaccinate their children and this has lead to a resurgence of a variety of diseases that were considered eradicated for decades.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="cc40befb-7ed8-4336-b09b-7009704f593e" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td>vaccination, disease, epidemic</td><td></td><td>children</td><td></td><td>United States </td><td>misinformation, laws</td><td>Coming soon</td></td></tr><tr class="gradeX"><td>When it comes to climate change, it is a worldwide effort, not just an effort in our individual lives or communities.   How do we ensure everyone is doing their part to minimize carbon emissions?<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="ea5cbb32-34e3-421b-90a2-368761095bab" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td>Carbon emissions, world, environment, climate change</td><td>https://www.washingtonpost.com/news/the-fix/wp/2015/11/30/the-united-nations-climate-change-talks-explained-in-4-charts</td><td>Everyone on earth</td><td>7,290,000,000</td><td> </td><td>Culture, demand, laws, practices, politics, logistics, consumerism, technology</td><td>Coming soon</td></td></tr><tr class="gradeX"><td>  The crime rates in DC has increased by 40% this summer.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="0e7d0584-e748-4c91-847a-c542c38d514d" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>  Homeless people need help, but help that will not be used on drugs or alcohol.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="a9e37710-3e0b-4d31-8b2f-2ee93b14592d" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Many modern American communities are no longer tight-knit like they used to be.  As a result, adults, teens, and children live in a world that is seemingly more isolated, cold, and impersonal.  This not only impacts daily lives, but also develops into deeper, long-lasting problems. <br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="bf447a6a-2f1a-42fb-897e-f04ec8d434db" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td></td><td></td><td></td><td></td><td>United States </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Social media takes over people's lives and degrades the quality of life for addicts.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="fe6c911e-fcfb-4b8d-95d8-ccf38e7e132b" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Social media takes over people's lives and degrades the quality of life for addicts.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="1ed462d4-4641-407a-8481-9a9081ac0ca0" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Health and safety regulations and/or their enforcement are deficient in China.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="6210ca38-767a-4c6e-952e-34a717ce51e9" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Government</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Encryption on communications allows citizens to have privacy, but at the same time this makes it difficult for governments to detect terrorist threat planning.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="7864a34e-b019-4984-87f3-f483dd645694" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Technology</td><td>Encryption, communication, privacy, technology, terrorism</td><td>http://techcrunch.com/2015/11/18/mccain-wants-legislation-mandating-government-access-to-encryption/</td><td>Terrorists, every day citizens </td><td>6,000,000,000</td><td> </td><td>Technology, politics, world events</td><td>Coming soon</td></td></tr><tr class="gradeX"><td>I am not working enough on my project.  I get distracted easily and spend too much time doing other things.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="8e6291d5-9237-4f8c-8fd3-472bff8e863b" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>personal, productivity, procrastination</td><td></td><td>me</td><td>1</td><td>United States Virginia</td><td>lack of structure/deadlines</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Many senior citizens are forced to live in nursing homes where they are mistreated or neglected.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="a325a7ad-49e3-44f8-a2e0-cd3c3efa089a" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> The pH levels in the Chesapeake Bay have been changing due to a variety of pollutants that enter from rivers upstream and other environmental pollutants.  As a result, organisms particularly vulnerable to these changes have been seeing drastic reductions in their populations; one example being frogs.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="eb6ca8ab-afce-4125-8a74-c9ec3495b49b" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td>frogs, Chesapeake Bay, pollution, population size</td><td></td><td></td><td></td><td>United States Chesapeake Bay, Maryland</td><td>pollutants, laws for dumping byproducts, business practices</td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Hackers have been getting into everything.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="01df2689-cc64-460e-a2cd-6f6852faccef" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Technology</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Children in Africa die of starvation every day.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="11fff27d-f413-4024-9f7c-5964077b3407" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>The bees are dying.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="19982193-b268-4383-ba79-7dc4e59e2662" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>There are too many traffic accidents.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="30c4e402-2e51-4209-be4a-15eecdd941e4" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>  Americans live in a culture of consumerism where they are encouraged to buy things they don't need and ultimately leads to extreme waste.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="50383310-047f-4f7f-a3b5-fa4621384824" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td>consumerism, waste, economy, environment</td><td></td><td>Americans, factory workers</td><td>1,000,000,000</td><td>China Chantilly, VA</td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> There are many refugees who are victims of the conflict in Syria.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="7ff1d657-e791-4f82-b401-523d69b79e88" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Government</td><td></td><td></td><td>Syrians</td><td>20,000,000</td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Women face discrimination in the workplace.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="bcfbf523-658c-4fb2-95c3-7c98020082ce" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Too much obesity in America.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="144d540b-26d9-47dc-985e-5bb5f4998cbb" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Poor road infrastructure in Kenya can lead to 50 km backups.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="15906b2a-7077-4f9f-9389-175ce3e1d0f4" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>Kenya, roads, infrastructure, transit, cars</td><td>http://www.bbc.com/news/world-africa-34867935?ocid=socialflow_facebook&ns_mchannel=social&ns_campaign=bbcnews</td><td>Kenyans, Ugandans, Rwandans</td><td>25,000,000</td><td>Kenya </td><td>Money, resources, weather</td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Sudden demand in resources put strain on local communities.  Although this may increase the revenue, the infrastructure may not be able to keep up with production.  For example, sudden popularity of quinoa in first world nations created high levels of demand.  As a result, quinoa became too expensive for the communities who rely on it as a staple to afford.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="7c6416e0-c5b3-42d7-95a3-fde24e4e6e65" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> problem sum<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="810b8af8-e27d-4638-a8ea-e90da37edcfd" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td>http://www.urmom.com</td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>  The el-Nino effect this year is expected to be the worst in history.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="dc3a7d0a-0888-47e3-a97a-bbfa71f18209" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>weather, climate change, environment</td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>  Monsanto creates a massive negative impact on biodiversity.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="e59807bc-18ee-4cb4-98d8-1a2e0a8bc3b9" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> There are often too many cats and dogs in animal shelters and as a result, many have to be euthanized if they are not adopted in time, in order to free up space for other animals.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="059ad307-e689-4ca7-9c70-952260abf0b5" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Infrastructure</td><td>animal shelters, animal adoption</td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Arsenic is found in drinking water around the world.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="3414212f-b681-4dd2-98bf-1394999a70b3" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td>Arsenic, water </td><td>http://www.scientificamerican.com/article/arsenic-contaminates-india-s-drinking-water-video/</td><td></td><td>3000000000</td><td>India </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Mass shootings have become very common in America.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="35cd5aba-545e-4911-801d-8d26aaa3f5e0" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td>Guns, mass shootings, violence, gun control</td><td>https://www.washingtonpost.com/news/wonk/wp/2015/12/02/the-san-bernardino-mass-shooting-is-the-second-today-and-the-355th-this-year/</td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Super bugs are becoming more prevalent<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="5bb92fdc-5334-40be-a185-7b71fc7d2ddc" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Poachers are slaughtering over 100 elephants a day for their tusks and they are now on the verge of extinction.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="72142d8f-28e2-4090-915d-4d94e21a2acc" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> ISIS is growing in power and influence.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="74646019-cb5d-466f-8c4f-a81fd2f28c85" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td>terrorism, ISIS, violence, religion</td><td>http://www.nybooks.com/blogs/nyrblog/2015/nov/16/paris-attacks-isis-strategy-chaos/</td><td>People affected by terrorism and laws regarding terrorism</td><td>6,000,000,000</td><td>United States </td><td>radicalism, extremism, technology, ideology, privacy, rights</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Etsy should be linked to webpages where you can purchase items.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="8dcdc623-956d-495c-9235-5a3bae1b1e39" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> The population of African grey parrots has declined by 99% since 1992 due to deforestation and the pet trade.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="91352c3d-c487-4165-9f6d-9d4ca9638c05" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td>Parrots, pet trade, africa, deforestation, grey parrots, wildlife</td><td>https://www.newscientist.com/article/dn28538-african-grey-parrot-numbers-plummet-by-99-per-cent-in-ghana/</td><td></td><td></td><td> </td><td>Deforestation, pet trade</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> <br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="a355ad59-71ad-412a-ba82-c395d8a72378" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Teachers often must pay out of pocket for classroom materials, despite their already low wages.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="ce3eb6fe-e38a-43ea-9ba7-c526f33b9ff9" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>High costs to heat a home <br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="e0c00019-a5d9-4df7-8c97-64e11ada76bd" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>People in America are so wasteful.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="e74843d6-bd98-4a8a-908d-a887ee1f1ebe" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>People forget how to interact in real life due to social media<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="65ef68ff-aa8a-4b2f-b53b-7d6a098fae35" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Social</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>The bitcoin infrastructure is currently not ready to handle the influx of transactions if it were to go mainstream.  Some critical change will need to take place to ensure the future success of bitcoin.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="8ab4dd42-93d7-409f-aa9c-6c410996458e" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>Bitcoin, economy </td><td>http://venturebeat.com/2015/09/14/bitcoins-leaders-dont-know-whats-next-for-bitcoin/</td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>Misuse and overuse of antibiotics have led to the rise of superbugs that are resistant to treatment.  People are now becoming very ill and even dying as a result.  This is a worldwide problem largely due to farming and medical practices.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="c1ff1948-f84d-450a-bf66-19bf60bc0200" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td>Antibiotics, superbugs, MRSA</td><td>http://www.consumerreports.org/cro/health/the-rise-of-superbugs/index.htm</td><td></td><td>6,000,000,000</td><td> </td><td>Laws, farming practices, medical practices, lack of knowledge</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> School curriculums do not include enough community engagement or philanthropy.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="c77f7bf6-0b2c-4fd1-a10b-62f2e8420d21" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Education</td><td>schools, community, education</td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Poor road infrastructure in Kenya can lead to 50 km backups.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="0eccb4e7-98e9-4e75-8a70-c4d114fe09a5" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td>Kenya, roads, infrastructure, transit, cars</td><td>http://www.bbc.com/news/world-africa-34867935?ocid=socialflow_facebook&ns_mchannel=social&ns_campaign=bbcnews</td><td>Kenyans, Ugandans, Rwandans</td><td>25,000,000</td><td>Kenya </td><td>Money, resources, weather</td><td>Coming soon</td></td></tr><tr class="gradeX"><td> adsdasd<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="4d2ced0a-1fdf-4a6a-b801-72474febb3f1" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td>http://www.urmom.com</td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> Overuse of antibiotics has led to "superbugs" that have evolved to be resistant to antibiotics. <br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="50c8b8ac-5576-49a0-8bf6-2ec86c77b561" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Health</td><td>Superbugs, antibiotics, resistance, disease, epidemics, MRSA</td><td>http://www.iflscience.com/health-and-medicine/bacteria-found-resistance-antibiotic-typically-used-when-all-others-fail</td><td>All people can be infected by superbugs</td><td>7,290,000,000</td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> A dam in Brazil burst, sending toxic byproducts from an iron mill into the environment.  The disaster has killed at least 11 people and contaminated water for 250,000.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="758e2c1f-fcff-46c7-9ca8-cb89f8e978cb" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Environment</td><td>Toxic waste, Brazil, environment, disaster, dam, mercury, iron mill</td><td>http://www.iflscience.com/environment/toxic-sludge-burst-dam-reaches-atlantic-ocean</td><td></td><td>1,000,000</td><td>Brazil </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> There are much fewer women in Science, Technology, Engineering, and Mathematics (STEM) fields than men.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="b21b6278-6962-4fb1-892d-2ce5156bd20b" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td>The media is so full of garbage these days.<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="ba0ac832-4627-41b2-a9b2-61109b20b136" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td>Society</td><td></td><td></td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr><tr class="gradeX"><td> ajax<br><form class="form-horizontal" method="post" id="retrieve" action="retrieve_problem.php">
+                  <br/><br/><br/>
+                    <button input type="submit" class="btn btn-sm btn-primary m-t-n-xs" name='problem_identifier' value="f974daff-1505-4292-8865-4e363b5eeed4" style="width:40%" type="button"><strong>View/Edit Details</strong></button>
+                  </form>
+              <td></td><td></td><td>http://www.urmom.com</td><td></td><td></td><td> </td><td></td><td>Coming soon</td></td></tr>                    </tbody>
+                    <tfoot>
+<!--                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Tags</th>
+                        <th data-hide="phone,tablet">URL</th>
+                        <th data-hide="phone,tablet">Affected group</th>
+                        <th># Affected</th>
+                        <th>Location</th>
+                        <th data-hide="phone,tablet">Factors</th>
+                        <th>Awareness</th>
+
+                    </tr> -->
+            <tr>
+                                    <td colspan="5">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                    </tfoot>
+                    </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+
+    </script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            $('.dataTables-example').dataTable({
+                responsive: true,
+                "dom": 'T<"clear">lfrtip',
+                "tableTools": {
+                    "sSwfPath": "js/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                }
+            });
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable( '../example_ajax.php', {
+                "callback": function( sValue, y ) {
+                    var aPos = oTable.fnGetPosition( this );
+                    oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+                },
+                "submitdata": function ( value, settings ) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition( this )[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            } );
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData( [
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row" ] );
+
+        }
+    </script>
+<style>
+    body.DTTT_Print {
+        background: #fff;
+
+    }
+    .DTTT_Print #page-wrapper {
+        margin: 0;
+        background:#fff;
+    }
+
+    button.DTTT_button, div.DTTT_button, a.DTTT_button {
+        border: 1px solid #e7eaec;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+    button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+        border: 1px solid #d2d2d2;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+
+    .dataTables_filter label {
+        margin-right: 5px;
+
+    }
+</style>
+</body>
+
+</html>
