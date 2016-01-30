@@ -68,6 +68,7 @@ router.get("/example",function(req,res) {
           console.log(problem_list);
           
           res.render('example_table', {problemList: problem_list});
+
         }
       })
       cursor.each(function(err, row) {

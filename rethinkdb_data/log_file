@@ -1,0 +1,19 @@
+2016-01-30T18:15:08.042501000 0.555085s notice: Recursively removing directory /Users/puddleduck/solvespark/rethinkdb_data/tmp
+2016-01-30T18:15:08.043940000 0.556528s notice: Initializing directory /Users/puddleduck/solvespark/rethinkdb_data
+2016-01-30T18:15:08.044044000 0.556627s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/puddleduck/solvespark/rethinkdb_data' did not already exist or is empty.)
+2016-01-30T18:15:08.044110000 0.556693s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T18:15:08.051017000 0.563601s notice: Running on Darwin 15.3.0 x86_64
+2016-01-30T18:15:08.051079000 0.563662s notice: Loading data from directory /Users/puddleduck/solvespark/rethinkdb_data
+2016-01-30T18:15:08.416117000 0.928741s info: Automatically using cache size of 1323 MB
+2016-01-30T18:15:08.417672000 0.930295s notice: Listening for intracluster connections on port 29015
+2016-01-30T18:15:08.420295000 0.932918s notice: Listening for client driver connections on port 28015
+2016-01-30T18:15:08.420427000 0.933050s notice: Listening for administrative HTTP connections on port 8080
+2016-01-30T18:15:08.420435000 0.933058s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-30T18:15:08.420439000 0.933062s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-30T18:15:08.420442000 0.933065s notice: Server ready, "lazarus_5jj" 1ae89dd0-e578-4b81-bae9-e5410c274af9
+2016-01-30T18:15:08.632119000 1.144770s notice: A newer version of the RethinkDB server is available: 2.2.3-1. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-01-30T18:15:09.534658000 2.047309s notice: Server got SIGINT from pid 580, uid 501; shutting down...
+2016-01-30T18:15:09.534908000 2.047559s notice: Shutting down client connections...
+2016-01-30T18:15:09.535028000 2.047679s notice: All client connections closed.
+2016-01-30T18:15:09.535038000 2.047689s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-01-30T18:15:09.537310000 2.049961s notice: Storage engine shut down.
