@@ -23,13 +23,16 @@ Sample data!
 </script>
 </div>
 
+<table id=>
+</table>
+
 <div>
 <script type="text/javascript">
 var problems = $('#problem-list').text();
 var decoded_problems = $("<div/>").html(problems).text();
 var parsed_problems = $.parseJSON(decoded_problems);
 $.each(parsed_problems, function(i, problem) {
-    console.log(problem.id);
+    console.log(problem.ProblemDescription);
 });
 </script>
 </div>
