@@ -13,7 +13,6 @@
 <body>
 
 <div>
-Sample data!
 </div>
 
 
@@ -23,7 +22,18 @@ Sample data!
 </script>
 </div>
 
-<table id=>
+<table id="problem-table">
+<thead>
+<tr>
+<th>Description</th>
+<th>Category</th>
+<th>Tags</th>
+<th>Affected</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody id="problem-text">
+</tbody>
 </table>
 
 <div>
@@ -32,7 +42,14 @@ var problems = $('#problem-list').text();
 var decoded_problems = $("<div/>").html(problems).text();
 var parsed_problems = $.parseJSON(decoded_problems);
 $.each(parsed_problems, function(i, problem) {
-    console.log(problem.ProblemDescription);
+    var $tr = $('<tr>').append(
+        $('<td>').text(problem.ProblemDescription), 
+        $('<td>').text(problem.ProblemCategory), 
+        $('<td>').text(problem.Tags), 
+        $('<td>').text(problem.AffectedNumber), 
+        $('<td>').text(problem.GeographicLocation)
+    );
+    $('#problem-text').append($tr);
 });
 </script>
 </div>
